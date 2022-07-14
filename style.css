@@ -1,0 +1,181 @@
+ 
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+    :root{
+      /*p = pale, g= grayish, d = dark*/
+      --p-blue:hsl(243, 100%, 93%);
+      --g-blue:hsl(229, 7%, 55%);
+      --d-blue:hsl(228, 56%, 26%);
+      --very-d-blue: hsl(229, 57%, 11%);
+    }
+    @keyframes storage{
+      from{
+        width: 10%;
+      }
+      to{
+        width: 70%;
+      }
+    }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway', sans-serif;
+    }
+   
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: var(--very-d-blue); */
+      background-image: url(./images/bg-mobile.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    main{
+      width: 86%;
+      max-width: 382px;
+    }
+    .top-section, .bottom-section{
+      background-color: var(--d-blue);
+     
+    }
+    .top-section{
+      padding: 2.3em;
+      border-radius: 10px 100px 10px 10px;
+      margin-bottom: 0.7em;
+    }
+    .images{
+      display: flex;
+      gap: 15px;
+      margin-top: 1.9em;
+    }
+    .images img{
+      display: block;
+   
+    }
+    .images__inner{
+      background-color: var(--very-d-blue);
+      width: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.7em 0;
+      border-radius: 10px;
+      cursor: pointer;
+    
+    }
+    .bottom-section{
+      border-radius: 10px;
+      padding: 2em;
+      position: relative;
+    }
+    .bottom-section>h1{
+      font-size: 0.8rem;
+      color: var(--g-blue);
+      font-weight: 400;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+   .bottom-section>h1>span{
+    font-weight: 700;
+    color: var(--p-blue);
+   }
+    .storage-bar__outer{
+      height: 17px;
+      background-color: var(--very-d-blue);
+      border-radius: 10px;
+      padding: 2px;
+    }
+    .storage-bar__inner{
+      width: 70%;
+      background-image: linear-gradient(to right,hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+      height: 100%;
+      border-radius: 10px;
+      padding: 1px;
+      animation: storage 2s ease-in-out 0s 1 forwards;
+    }
+    .storage-bar__ball{
+      height: 100%;
+      width: 10px;
+      background-color: var(--p-blue);
+      border-radius: 100px;
+      margin-left: auto;
+      margin-right: 1px;
+      
+
+    }
+    .gb-left-message{
+      position: absolute;
+      width: 45%;
+     
+      bottom: -30px;
+      left: 27.5%;
+    }
+    .gb-left{
+      background-color: white;
+      border-radius: 10px 10px 0 10px;
+      padding: 0.6em 1em;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+    .gb-left__gb{
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--very-d-blue);
+    }
+    .gb-left__text{
+      align-self: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--g-blue);
+    }
+    .storage-size{
+      display: flex;
+      font-size: 0.7rem;
+      color: var(--p-blue);
+      justify-content: space-between;
+      font-weight: 700;
+      margin-top: 0.7em;
+    }
+   @media(min-width:1075px){
+    
+    body{
+      background-image: url(./images/bg-desktop.png);
+      background-size: auto;
+      background-size:100% 50% ;
+      background-position-y:100% ;
+      background-color: var(--very-d-blue);
+    }
+    main{
+      max-width: none;
+      display: flex;
+      width: 60%;
+      justify-content: space-between;
+    }
+    .top-section{
+      margin-bottom: 0;
+      width: 38%;
+    }
+    .bottom-section{
+      width: 58%;
+      align-self: flex-end;
+    }
+    .bottom-section>h1{
+      text-align: left;
+      width: 100%;
+    }
+    .gb-left-message{
+      width: 30%;
+      bottom: 70%;
+      left: 63%;
+    }
+    .message-pointer{
+      height: 20px;
+      background-color: white;
+      clip-path: polygon(85% 0%,101% 0,101% 100%);
+    }
+   }
